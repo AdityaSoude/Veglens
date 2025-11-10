@@ -1,0 +1,5 @@
+{
+  "inputs": "Hi",
+  "parameters": { "max_new_tokens": 30, "temperature": 0.2 },
+  "options": { "wait_for_model": true }
+}

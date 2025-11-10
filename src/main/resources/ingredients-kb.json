@@ -1,0 +1,624 @@
+[
+  {
+    "canonical": "gelatin",
+    "synonyms": ["gelatine", "hydrolyzed collagen"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Animal collagen (bovine/porcine)"
+  },
+  {
+    "canonical": "rennet",
+    "synonyms": ["animal rennet"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Animal rennet not allowed",
+    "exceptions": [
+      { "if_matches": "microbial|vegetable rennet", "override": "allow" }
+    ]
+  },
+  {
+    "canonical": "egg",
+    "synonyms": ["eggs", "albumen", "egg white", "egg yolk", "egg powder"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Egg not allowed in Pure Veg"
+  },
+  {
+    "canonical": "fish",
+    "synonyms": [
+      "anchovy",
+      "tuna",
+      "salmon",
+      "sardine",
+      "cod",
+      "oyster",
+      "clam",
+      "mussel",
+      "shrimp",
+      "prawn",
+      "crab",
+      "lobster",
+      "octopus",
+      "squid"
+    ],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Fish/seafood"
+  },
+  {
+    "canonical": "shellac",
+    "synonyms": ["confectioner’s glaze"],
+    "codes": ["E904"],
+    "status_pure_veg": "deny",
+    "notes": "Insect-derived resin"
+  },
+  {
+    "canonical": "carmine",
+    "synonyms": ["cochineal", "carminic acid"],
+    "codes": ["E120"],
+    "status_pure_veg": "deny",
+    "notes": "Insect-derived color"
+  },
+  {
+    "canonical": "mono and diglycerides",
+    "synonyms": [
+      "mono- and diglycerides",
+      "monoglycerides",
+      "diglycerides",
+      "E471"
+    ],
+    "codes": ["E471"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Source-dependent (plant/animal)"
+  },
+  {
+    "canonical": "lecithin",
+    "synonyms": ["e322", "soy lecithin", "sunflower lecithin"],
+    "codes": ["E322"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Usually plant; unspecified is ambiguous",
+    "exceptions": [{ "if_matches": "soy|sunflower", "override": "allow" }]
+  },
+  {
+    "canonical": "l-cysteine",
+    "synonyms": ["e920", "cysteine"],
+    "codes": ["E920"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Can be animal- or microbially-derived"
+  },
+  {
+    "canonical": "natural flavors",
+    "synonyms": ["natural flavour", "natural flavor"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Composite; may hide animal-derived carriers"
+  },
+  {
+    "canonical": "enzymes",
+    "synonyms": ["enzyme"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Source-dependent; unspecified is ambiguous"
+  },
+  {
+    "canonical": "milk",
+    "synonyms": [
+      "milk solids",
+      "lactose",
+      "whey",
+      "casein",
+      "caseinate",
+      "butter",
+      "ghee",
+      "cream",
+      "cheese",
+      "paneer",
+      "yogurt"
+    ],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Dairy is allowed in Pure Veg"
+  },
+  {
+    "canonical": "plant oils",
+    "synonyms": [
+      "soybean oil",
+      "sunflower oil",
+      "canola oil",
+      "olive oil",
+      "palm oil"
+    ],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Plant-derived"
+  },
+  {
+    "canonical": "beef extract",
+    "synonyms": ["beef stock", "beef base"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Animal-derived flavor/stock"
+  },
+  {
+    "canonical": "chicken broth",
+    "synonyms": ["chicken stock", "chicken base"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Animal-derived stock"
+  },
+  {
+    "canonical": "fish sauce",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Fermented fish product"
+  },
+  {
+    "canonical": "oyster sauce",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Contains oyster extract"
+  },
+  {
+    "canonical": "anchovy paste",
+    "synonyms": ["anchovy essence"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Fish-derived"
+  },
+  {
+    "canonical": "clam extract",
+    "synonyms": ["clam juice"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Shellfish-derived"
+  },
+  {
+    "canonical": "caviar",
+    "synonyms": ["roe (fish eggs)"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Fish eggs"
+  },
+  {
+    "canonical": "roe",
+    "synonyms": ["fish roe"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Fish eggs"
+  },
+  {
+    "canonical": "pepsin",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Animal enzyme"
+  },
+  {
+    "canonical": "pancreatin",
+    "synonyms": ["pancreatic enzymes"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Animal enzyme mix"
+  },
+  {
+    "canonical": "lipase",
+    "synonyms": ["animal lipase"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Enzyme; source-dependent",
+    "exceptions": [
+      { "if_matches": "microbial|vegetable", "override": "allow" },
+      { "if_matches": "animal|calf|kid|porcine|bovine", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "lanolin",
+    "synonyms": ["e913"],
+    "codes": ["E913"],
+    "status_pure_veg": "deny",
+    "notes": "Animal (sheep wool) derivative"
+  },
+  {
+    "canonical": "vitamin d3",
+    "synonyms": ["cholecalciferol", "d3"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Often from lanolin; can be vegan from lichen",
+    "exceptions": [
+      { "if_matches": "lichen|vegan|plant", "override": "allow" },
+      { "if_matches": "lanolin", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "beeswax",
+    "synonyms": ["cera alba"],
+    "codes": ["E901"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Insect-derived wax used as glazing agent; practice varies"
+  },
+  {
+    "canonical": "magnesium stearate",
+    "synonyms": ["mag stearate"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Stearate can be plant or animal",
+    "exceptions": [
+      { "if_matches": "vegetable|plant", "override": "allow" },
+      { "if_matches": "animal|beef|tallow", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "calcium stearate",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Stearate can be plant or animal",
+    "exceptions": [
+      { "if_matches": "vegetable|plant", "override": "allow" },
+      { "if_matches": "animal|beef|tallow", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "stearic acid",
+    "synonyms": ["octadecanoic acid"],
+    "codes": ["E570"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Can be plant or animal",
+    "exceptions": [
+      { "if_matches": "vegetable|plant", "override": "allow" },
+      { "if_matches": "animal|beef|tallow", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "sodium stearoyl lactylate",
+    "synonyms": [
+      "sodium stearoyllactylate",
+      "sodium stearyl lactylate",
+      "sodium stearoyl-2-lactylate",
+      "stearoyl lactylate"
+    ],
+    "codes": ["E481"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Emulsifier; stearic acid may be plant- or animal-derived.",
+    "exceptions": [
+      {
+        "if_matches": "vegetable|plant[- ]based|from vegetable oils|from plant oils|vegan|suitable for vegetarians",
+        "override": "allow"
+      },
+      {
+        "if_matches": "animal[- ]derived|from tallow|from animal fat|beef tallow",
+        "override": "deny"
+      }
+    ]
+  },
+  {
+    "canonical": "calcium stearoyl lactylate",
+    "synonyms": ["csl"],
+    "codes": ["E482"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Source-dependent emulsifier",
+    "exceptions": [{ "if_matches": "vegetable|plant", "override": "allow" }]
+  },
+  {
+    "canonical": "disodium inosinate",
+    "synonyms": ["inosinate"],
+    "codes": ["E631"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Often meat/fish-derived; also via fermentation",
+    "exceptions": [
+      {
+        "if_matches": "plant|vegetarian|vegan|yeast|ferment",
+        "override": "allow"
+      },
+      { "if_matches": "fish|meat|chicken|beef|pork", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "disodium guanylate",
+    "synonyms": ["guanylate"],
+    "codes": ["E627"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Often paired with inosinate; source-dependent",
+    "exceptions": [
+      {
+        "if_matches": "plant|vegetarian|vegan|yeast|ferment",
+        "override": "allow"
+      },
+      { "if_matches": "fish|meat|chicken|beef|pork", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "disodium 5'-ribonucleotides",
+    "synonyms": ["ribonucleotides", "e635"],
+    "codes": ["E635"],
+    "status_pure_veg": "ambiguous",
+    "notes": "Mixture of E627/E631; source-dependent",
+    "exceptions": [
+      {
+        "if_matches": "plant|vegetarian|vegan|yeast|ferment",
+        "override": "allow"
+      },
+      { "if_matches": "fish|meat|chicken|beef|pork", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "lysozyme",
+    "synonyms": ["e1105"],
+    "codes": ["E1105"],
+    "status_pure_veg": "deny",
+    "notes": "From egg white (processing aid/preservative)"
+  },
+  {
+    "canonical": "edible bone phosphate",
+    "synonyms": ["bone phosphate"],
+    "codes": ["E542"],
+    "status_pure_veg": "deny",
+    "notes": "From animal bone"
+  },
+  {
+    "canonical": "chitosan",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Typically from crustacean shells",
+    "exceptions": [{ "if_matches": "fungal|mushroom", "override": "allow" }]
+  },
+  {
+    "canonical": "glucosamine",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Often from shellfish; can be corn-fermented",
+    "exceptions": [
+      {
+        "if_matches": "vegetarian|vegan|corn|maize|ferment",
+        "override": "allow"
+      },
+      { "if_matches": "shellfish|crustacean", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "marshmallow",
+    "synonyms": ["marshmallows"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Often contains gelatin; some brands are vegan",
+    "exceptions": [
+      { "if_matches": "vegan|agar|carrageenan", "override": "allow" },
+      { "if_matches": "gelatin|gelatine", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "bone char sugar",
+    "synonyms": ["bone char filtered sugar", "refined with bone char"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Refining aid may use animal bone char; rarely disclosed on labels"
+  },
+  {
+    "canonical": "rennet casein",
+    "synonyms": ["rennet-casein"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Casein precipitated with animal rennet"
+  },
+  {
+    "canonical": "animal shortening",
+    "synonyms": ["beef shortening"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Rendered animal fat"
+  },
+  {
+    "canonical": "vegetable shortening",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Plant-derived fat"
+  },
+  {
+    "canonical": "dha",
+    "synonyms": ["docosahexaenoic acid"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Fish or algal source",
+    "exceptions": [
+      { "if_matches": "algal|algae|schizochytrium", "override": "allow" },
+      { "if_matches": "fish", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "epa",
+    "synonyms": ["eicosapentaenoic acid"],
+    "codes": [],
+    "status_pure_veg": "ambiguous",
+    "notes": "Fish or algal source",
+    "exceptions": [
+      { "if_matches": "algal|algae|schizochytrium", "override": "allow" },
+      { "if_matches": "fish", "override": "deny" }
+    ]
+  },
+  {
+    "canonical": "lactic acid",
+    "synonyms": ["e270"],
+    "codes": ["E270"],
+    "status_pure_veg": "allow",
+    "notes": "Usually microbial fermentation (not milk)"
+  },
+  {
+    "canonical": "tocopherols",
+    "synonyms": ["mixed tocopherols", "vitamin e", "alpha-tocopherol"],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Antioxidant, typically plant oil–derived"
+  },
+  {
+    "canonical": "ascorbyl palmitate",
+    "synonyms": [],
+    "codes": ["E304"],
+    "status_pure_veg": "allow",
+    "notes": "Vitamin C ester; typically plant oil source"
+  },
+  {
+    "canonical": "sodium caseinate",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Dairy-derived (allowed in Pure Veg)"
+  },
+  {
+    "canonical": "whey protein",
+    "synonyms": ["whey protein concentrate", "wpc", "wpi"],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Dairy-derived (allowed in Pure Veg)"
+  },
+  {
+    "canonical": "lard",
+    "synonyms": ["rendered pork fat", "pork fat", "manteca", "saindoux"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Animal-derived fat from pork.",
+    "exceptions": []
+  },
+  {
+    "canonical": "tallow",
+    "synonyms": ["beef tallow", "mutton tallow", "suet"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Rendered fat from beef or mutton.",
+    "exceptions": []
+  },
+  {
+    "canonical": "casing",
+    "synonyms": ["natural casing", "sausage casing"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Often made from animal intestines; some synthetic or plant-based casings exist.",
+    "exceptions": [
+      { "if_matches": "synthetic|plant-based|vegetable", "override": "allow" }
+    ]
+  },
+  {
+    "canonical": "isinglass",
+    "synonyms": ["fish bladder", "fish gelatin"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Derived from fish swim bladders, used as a clarifying agent.",
+    "exceptions": []
+  },
+  {
+    "canonical": "albumin",
+    "synonyms": ["egg albumin", "egg white protein"],
+    "codes": [],
+    "status_pure_veg": "deny",
+    "notes": "Protein derived from egg whites.",
+    "exceptions": []
+  },
+  {
+    "canonical": "casein hydrolysate",
+    "synonyms": ["hydrolyzed casein"],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Dairy-derived protein, allowed in Pure Veg.",
+    "exceptions": []
+  },
+  {
+    "canonical": "whey hydrolysate",
+    "synonyms": ["hydrolyzed whey"],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Dairy-derived protein, allowed in Pure Veg.",
+    "exceptions": []
+  },
+  {
+    "canonical": "cocoa butter",
+    "synonyms": ["theobroma oil"],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Plant-derived fat from cocoa beans.",
+    "exceptions": []
+  },
+  {
+    "canonical": "cocoa mass",
+    "synonyms": ["cocoa liquor", "cocoa paste"],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Ground cocoa beans, plant-derived.",
+    "exceptions": []
+  },
+  {
+    "canonical": "cocoa powder",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Dried and powdered form of cocoa mass, plant-derived.",
+    "exceptions": []
+  },
+  {
+    "canonical": "pectin",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Plant-derived gelling agent, typically from citrus or apple.",
+    "exceptions": []
+  },
+  {
+    "canonical": "agar",
+    "synonyms": ["agar-agar"],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Plant-derived gelling agent from seaweed.",
+    "exceptions": []
+  },
+  {
+    "canonical": "carrageenan",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Plant-derived gelling and thickening agent from red seaweed.",
+    "exceptions": []
+  },
+  {
+    "canonical": "xanthan gum",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Microbially-derived thickening agent, typically from fermentation of sugars.",
+    "exceptions": []
+  },
+  {
+    "canonical": "guar gum",
+    "synonyms": [],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Plant-derived thickening agent from guar beans.",
+    "exceptions": []
+  },
+  {
+    "canonical": "locust bean gum",
+    "synonyms": ["carob bean gum"],
+    "codes": [],
+    "status_pure_veg": "allow",
+    "notes": "Plant-derived thickening agent from carob seeds.",
+    "exceptions": []
+  },
+  {
+    "canonical": "sorbitol",
+    "synonyms": ["sorbitol syrup", "glucitol"],
+    "codes": ["E420"],
+    "status_pure_veg": "allow",
+    "notes": "Sugar alcohol derived from glucose, typically plant-based.",
+    "exceptions": []
+  },
+  {
+    "canonical": "mannitol",
+    "synonyms": [],
+    "codes": ["E421"],
+    "status_pure_veg": "allow",
+    "notes": "Sugar alcohol derived from mannose, typically plant-based.",
+    "exceptions": []
+  }
+]

@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+# moved out of veglens.*
+google:
+  project-id: veglens
+  location: us-central1
+
+vertex:
+  model: gemini-2.5-flash-lite
+veglens:
+  kb:
+    path: ./kb/ingredients-kb.json

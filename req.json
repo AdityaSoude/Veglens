@@ -1,0 +1,6 @@
+{
+  "model": "llama3.1:8b-instruct-q4_0",
+  "prompt": "Reply with exactly: OK",
+  "stream": false,
+  "options": { "num_gpu": 0, "num_ctx": 512, "temperature": 0 }
+}

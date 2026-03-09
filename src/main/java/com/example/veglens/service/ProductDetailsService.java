@@ -1,6 +1,7 @@
 package com.example.veglens.service;
 
 import com.example.veglens.Integrations.WebFetchService;
+import com.example.veglens.ai.AiUsageLimiter;
 import com.example.veglens.ai.GeminiParsers;
 import com.example.veglens.ai.GeminiPrompts;
 import com.example.veglens.ai.VertexAiClient;
@@ -22,6 +23,7 @@ public class ProductDetailsService {
 
   private final VertexAiClient vertex; // AI only
   private final WebFetchService webFetchService;;
+  private final AiUsageLimiter aiLimiter;
 
   public ProductDetailsResponse fetchProduct(String barcode, String query, PolicyOptions opts){
 
@@ -39,8 +41,14 @@ public class ProductDetailsService {
     String offUrl = null, brandUrl = null;
 
 
-    var off =webFetchService.fetchProductByBarcode(barcode);
-    var p =off.get();
+    var off = webFetchService.fetchProductByBarcode(barcode);
+
+if (off.isEmpty()) {
+    System.out.println("Product not found for barcode: " + barcode);
+    return emptyResponse(barcode);
+}
+
+var p = off.get();
     // In AI-only mode, we don't fetch external data.
     // We treat the query as both the product name and the ingredient text (best-effort).
    
@@ -58,6 +66,7 @@ public class ProductDetailsService {
     String prompt = GeminiPrompts.nonVegCheckPrompt(name, brand, ingredients, opts);
     String json;
     try {
+      aiLimiter.checkLimit(); // enforce usage limits before calling AI
         json = vertex.generate(prompt);
     }    catch (IOException e) {
   // Handle network / Vertex API issues gracefully

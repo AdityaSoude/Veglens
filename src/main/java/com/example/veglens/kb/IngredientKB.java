@@ -29,7 +29,7 @@ public class IngredientKB {
     private final List<Entry> entries = new ArrayList<>(); // <— ADD
 
     public IngredientKB(ObjectMapper om) {
-        try (InputStream in = new ClassPathResource("ingredients-kb.json").getInputStream()) {
+        try (InputStream in = new ClassPathResource("kb/ingredients-kb.json").getInputStream()) {
             List<Entry> loaded = om.readValue(in, new TypeReference<>() {});
             for (Entry e : loaded) {
                 entries.add(e); // <— ADD

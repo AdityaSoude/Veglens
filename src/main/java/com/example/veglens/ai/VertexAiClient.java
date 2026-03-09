@@ -9,6 +9,8 @@ import com.google.cloud.vertexai.api.GenerationConfig;
 import com.google.cloud.vertexai.api.Part;
 import com.google.cloud.vertexai.api.PredictionServiceClient;
 import com.google.cloud.vertexai.api.PredictionServiceSettings;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +18,7 @@ import java.io.Closeable;
 import java.io.IOException;
 
 @Component
+@ConditionalOnProperty(name = "vertex.enabled", havingValue = "true")
 public class VertexAiClient implements AutoCloseable, Closeable {
   private final String projectId;
   private final String location;

@@ -11,11 +11,9 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
             // no trailing slashes!
-            .allowedOrigins(
-                "http://localhost:5173",
-                "http://127.0.0.1:5173",
-                "https://veglens-frontend.vercel.app" // your ngrok domain
-            )
+            
+               .allowedOriginPatterns("*") // your ngrok domain
+            
             .allowedMethods("GET", "POST", "OPTIONS")
             .allowedHeaders("*")
             .allowCredentials(false)

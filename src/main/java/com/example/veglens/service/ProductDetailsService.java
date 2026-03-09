@@ -21,7 +21,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ProductDetailsService {
 
-  private final VertexAiClient vertex; // AI only
+  private final Optional<VertexAiClient> vertex; // AI only
   private final WebFetchService webFetchService;;
   private final AiUsageLimiter aiLimiter;
 
@@ -67,7 +67,37 @@ var p = off.get();
     String json;
     try {
       aiLimiter.checkLimit(); // enforce usage limits before calling AI
-        json = vertex.generate(prompt);
+        if (vertex.isEmpty()) {
+    return new ProductDetailsResponse(
+        barcode,
+        name,
+        brand,
+        qty,
+        List.of(),
+        imgs,
+        null,
+        null,
+        Map.of(),
+        List.of(),
+        ingredients,
+        List.of(),
+        "unknown",
+        0.0,
+        List.of("AI disabled"),
+        List.of(),
+        "allow",
+        false,
+        List.of(),
+        false,
+        List.of(),
+        List.of(),
+        0.0,
+        "AI not configured",
+        List.of()
+    );
+}
+
+json = vertex.get().generate(prompt);
     }    catch (IOException e) {
   // Handle network / Vertex API issues gracefully
   return new ProductDetailsResponse(

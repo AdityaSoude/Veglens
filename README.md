@@ -1,5 +1,7 @@
 # 🌱 VegLens — AI-powered Food Transparency
 
+[Click Here for DEMO](https://veglens-frontend.vercel.app/)
+
 **VegLens**, or as my roommates call it *“Mini Me”*, is an AI-powered app that helps users instantly identify whether a food item is **Veg, Non-Veg, or Vegan** — bringing back the clarity of India’s familiar green/red dot system to places where it doesn’t exist.
 
 ---
